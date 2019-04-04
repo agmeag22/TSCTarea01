@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1553209085 source:c:\users\enmanuel\desktop\codeblocks-16.01mingw-nosetup\fem1d\test.cpp
+
+1553284180 source:c:\users\enmanuel\desktop\codeblocks-16.01mingw-nosetup\fem1d\main.cpp
+	<iostream>
+	"classes.h"
+	"tools.h"
+
+1553267825 c:\users\enmanuel\desktop\codeblocks-16.01mingw-nosetup\fem1d\test.h
+
+1553287394 c:\users\enmanuel\desktop\codeblocks-16.01mingw-nosetup\fem1d\tools.h
+	<fstream>
+
+1553296812 c:\users\enmanuel\desktop\codeblocks-16.01mingw-nosetup\fem1d\classes.h
+
+1553473058 source:c:\users\enxel\desktop\fem1d\main.cpp
+	<iostream>
+	"math_tools.h"
+	"classes.h"
+	"tools.h"
+	"sel.h"
+
+1553471947 c:\users\enxel\desktop\fem1d\classes.h
+
+1553471947 c:\users\enxel\desktop\fem1d\tools.h
+	<fstream>
+
+1553473059 c:\users\enxel\desktop\fem1d\sel.h
+
+1553470404 c:\users\enxel\desktop\fem1d\math_tools.h
+	<vector>
+
+1553549119 source:c:\users\enmanuel\desktop\fem1d\main.cpp
+	<iostream>
+	"math_tools.h"
+	"classes.h"
+	"tools.h"
+	"sel.h"
+
+1553546421 c:\users\enmanuel\desktop\fem1d\math_tools.h
+	<vector>
+	"math.h"
+	"stdlib.h"
+
+1553529120 c:\users\enmanuel\desktop\fem1d\classes.h
+
+1553469732 c:\users\enmanuel\desktop\fem1d\tools.h
+	<fstream>
+
+1553537444 c:\users\enmanuel\desktop\fem1d\sel.h
+
+1553740597 source:c:\users\miguelaviles\videos\fem1d\fem1d\main.cpp
+	<iostream>
+	"math_tools.h"
+	"classes.h"
+	"tools.h"
+	"sel.h"
+
+1553740395 c:\users\miguelaviles\videos\fem1d\fem1d\math_tools.h
+	<vector>
+	"math.h"
+	"stdlib.h"
+
+1553734383 c:\users\miguelaviles\videos\fem1d\fem1d\classes.h
+
+1553733652 c:\users\miguelaviles\videos\fem1d\fem1d\tools.h
+	<fstream>
+
+1553736106 c:\users\miguelaviles\videos\fem1d\fem1d\sel.h
+
