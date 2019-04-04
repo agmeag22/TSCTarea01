@@ -48,14 +48,14 @@ void showbs(vector<Vector> bs){
 //- El objeto mesh
 //La función construye la matrix local K para el elemento
 //especificado de acuerdo a la formulación del problema
-Matrix createLocalK(int element,mesh &m){
+Matrix createLocalK(int idelement,mesh &m){
     //Se prepara la matriz y sus dos filas (se sabe que es una matriz 2x2)
     Matrix K;
     Vector row1, row2;
 
     //De acuerdo a la formulación, la matriz local K tiene la forma:
     //          (k/l)*[ 1 -1 ; -1 1 ]
-    element inel=m.getElements()[element];
+    element inel=m.getElements()[idelement];
     //Se extraen del objeto mesh los valores de k y l
     float k = m.getParameter(THERMAL_CONDUCTIVITY), l = m.getNodes()[inel.getNode2()-1].getX()-m.getNodes()[inel.getNode1()-1].getX();
     //Se crean las filas
@@ -72,13 +72,13 @@ Matrix createLocalK(int element,mesh &m){
 //- El objeto mesh
 //La función construye el vector local b para el elemento
 //especificado de acuerdo a la formulación del problema
-Vector createLocalb(int element,mesh &m){
+Vector createLocalb(int idelement,mesh &m){
     //Se prepara el vector b (se sabe que será un vector 2x1)
     Vector b;
 
     //Se sabe que el vector local b tendrá la forma:
     //          (Q*l/2)*[ 1 ; 1 ]
-    element inel =m.getElements()[element];
+    element inel =m.getElements()[idelement];
     //Se extraen del objeto mesh los valores de Q y l
     float Q = m.getParameter(HEAT_SOURCE), l = m.getNodes()[inel.getNode2()-1].getX()-m.getNodes()[inel.getNode1()-1].getX();
     //Se insertan los datos en el vector
