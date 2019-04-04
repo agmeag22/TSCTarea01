@@ -55,9 +55,9 @@ Matrix createLocalK(int element,mesh &m){
 
     //De acuerdo a la formulación, la matriz local K tiene la forma:
     //          (k/l)*[ 1 -1 ; -1 1 ]
-
+    element inel=m.getElements()[element];
     //Se extraen del objeto mesh los valores de k y l
-    float k = m.getParameter(THERMAL_CONDUCTIVITY), l = m.getParameter(ELEMENT_LENGTH);
+    float k = m.getParameter(THERMAL_CONDUCTIVITY), l = m.getNodes()[inel.getNode2()-1].getX()-m.getNodes()[inel.getNode1()-1].getX();
     //Se crean las filas
     row1.push_back(k/l); row1.push_back(-k/l);
     row2.push_back(-k/l); row2.push_back(k/l);
@@ -78,9 +78,9 @@ Vector createLocalb(int element,mesh &m){
 
     //Se sabe que el vector local b tendrá la forma:
     //          (Q*l/2)*[ 1 ; 1 ]
-
+    element inel =m.getElements()[element];
     //Se extraen del objeto mesh los valores de Q y l
-    float Q = m.getParameter(HEAT_SOURCE), l = m.getParameter(ELEMENT_LENGTH);
+    float Q = m.getParameter(HEAT_SOURCE), l = m.getNodes()[inel.getNode2()-1].getX()-m.getNodes()[inel.getNode1()-1].getX();
     //Se insertan los datos en el vector
     b.push_back(Q*l/2); b.push_back(Q*l/2);
 
